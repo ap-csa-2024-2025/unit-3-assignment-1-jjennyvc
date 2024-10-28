@@ -9,6 +9,16 @@ public class Main
 
     boolean isRotated = (r1.getLength() == r2.getWidth()) && (r1.getWidth() == r2.getLength());
 
+    boolean isCongruent = r1.equals(r2) || isRotated;
+
+    double ratio1 = (double) r1.length / r1.width;
+    double ratio2 = (double) r2.length / r2.width;
+    boolean isSimilar = isCongruent || (ratio1 == ratio2);
+
+    System.out.println("isRotated: " + isRotated);
+    System.out.println("isCongruent: " + isCongruent);
+    System.out.println("isSimilar: " + isSimilar);
+
     
   }
 }
